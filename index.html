@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SocialRain</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="/style.css"></head><body>
+<header>
+<div class="logo"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 16a4 4 0 0 1-.5-7.97A5.5 5.5 0 0 1 17 7.5a4.5 4.5 0 0 1 .5 8.5"/><path d="M6.5 19l-1 2M17.5 19l-1 2"/><path d="M13 11l-3.5 5.5h3L11 22l4.5-7h-3z" fill="#FACC15" stroke="#FACC15"/></svg><span>Social<b>Rain</b></span></div>
+<button class="btn" id="up"><svg width="16" height="16" viewBox="0 0 24 24" fill="#06202E" aria-hidden="true"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg>Video uploaden</button>
+<span id="who"></span>
+</header>
+<main><div id="grid"></div></main>
+
+<div class="ov" id="watch"><button class="x" data-close aria-label="Sluiten">×</button><div class="box" id="wb"></div></div>
+
+<div class="ov" id="upl"><button class="x" data-close aria-label="Sluiten">×</button><div class="box" style="max-width:520px">
+<h2>Video uploaden</h2><label for="ut">Titel</label><input id="ut" maxlength="100"><label for="ud">Beschrijving</label><textarea id="ud" rows="3"></textarea>
+<label for="uf">Video (mp4 of webm, max 200 MB)</label><input id="uf" type="file" accept="video/mp4,video/webm">
+<p class="err" id="ue"></p><button class="btn" id="go">Uploaden</button></div></div>
+
+<div class="ov" id="auth"><canvas id="rain"></canvas><button class="x" data-close aria-label="Sluiten">×</button>
+<div class="gl"><svg class="bolt" width="44" height="44" viewBox="0 0 24 24" fill="#FACC15" aria-hidden="true"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg>
+<h2 id="at">Maak je account</h2><p id="as">Kies hoe je wilt beginnen.</p>
+<div class="tabs"><button id="tS" class="on">Account maken</button><button id="tL">Inloggen</button></div>
+<div id="v1"><button class="pv" data-p="google"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="#38BDF8" stroke-width="3"/></svg>Doorgaan met Gmail of Google</button>
+<button class="pv" data-p="apple"><svg width="20" height="20" viewBox="0 0 24 24" fill="#E8F1F8" aria-hidden="true"><path d="M16 3c0 2-1.5 3.5-3.5 3.5 0-2 1.5-3.5 3.5-3.5zM12 8c1.5 0 2 .8 3.5.8S18 8 19 9c-2.500 1.500-2 5 .5 6-1 2.500-2.500 5-4 5-1.200 0-1.500-.7-3-.7S9.700 20 8.500 20C6 20 4 14 6 10.500 7 9 8.500 8 10 8c1 0 1.500.5 2 .0z"/></svg>Doorgaan met Apple</button>
+<button class="pv" data-p="email"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8F1F8" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Doorgaan met e-mail</button>
+<button class="pv r" data-p="rain"><svg width="20" height="20" viewBox="0 0 24 24" fill="#06202E" aria-hidden="true"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg>Doorgaan met RainSlider Mail</button></div>
+<form id="v2" hidden><div id="fn"><label for="an">Naam</label><input id="an" autocomplete="nickname"></div>
+<div id="fe"><label for="ae">E-mailadres</label><input id="ae" type="email" autocomplete="email"></div>
+<div id="fr" hidden><label for="ar">Je RainSlider Mail-adres</label><div style="display:flex;align-items:center;gap:8px"><input id="ar" autocomplete="username" style="flex:1"><span class="m">@rainslidermail</span></div></div>
+<label for="ap">Wachtwoord</label><input id="ap" type="password" autocomplete="current-password"><p class="err" id="ae2"></p>
+<button class="btn" style="width:100%;justify-content:center" id="sub">Account maken</button><button type="button" class="btn g" style="width:100%;justify-content:center;margin-top:10px" id="bk">Terug</button></form>
+<p class="err" id="ae1"></p></div></div>
+
+<script src="/app.js"></script>
+</body></html>
